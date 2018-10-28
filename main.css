@@ -10,17 +10,44 @@ Header{
   padding: 10px 15px 10px 15px;
 }
 
-h1, h2, li {
+h1 {
+  font-size: 75px;
+  color: white;
+}
+
+h2, li {
   color: #666;
+  font-size: 55px;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 a {
   color: blue;
 }
 
+.flex-container {
+  display: flex;
+  background-color: black;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+img {
+  object-fit: contain;
+  background-size: contain;
+}
+
 p {
   background: #666;
   color: white;
+  font-size: 20px;
   padding: 10px;
 }
 
