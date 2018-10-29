@@ -45,6 +45,23 @@ img {
   object-fit: contain;
   background-size: contain;
 }
+.flex-container .btn {
+  position: absolute;
+  top:275px;
+  left: 10px;
+  transform: translate(100%, 50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.flex-container .btn:hover {
+  background-color: black;
+}
 
 p {
   background: #666;
