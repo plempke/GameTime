@@ -7,6 +7,7 @@ body {
 Header{
   background: #999;
   color: white;
+  font-size: 75px;
   padding: 10px 15px 10px 15px;
 }
 
