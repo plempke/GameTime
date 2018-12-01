@@ -93,3 +93,22 @@ snake = {
       return this._queue.pop();
     }
   };
+
+  /* set the food at random points in the grid unoccupied by the snake */
+  function setFood() {
+      var empty = [];
+      //iterate through the grid to find all the empty cells
+      for (var x = 0; x < grid.width; x++) {
+        for (var y = 0; y < grid.height; y++) {
+          if (grid.get(x, y) === EMPTY) {
+            empty.push({
+              x: x,
+              y: y
+            });
+          }
+        }
+      }
+      //choose an empty cell out of what was returned
+      var randpos = empty[Math.round(Math.random() * (empty.length -1))];
+  }
+  /*Created the main function to start the game */
