@@ -217,3 +217,36 @@ snake = {
     }
   }
 
+  /*function to draw the game grid onto the canvas*/
+  function draw() {
+    // calculate tile-width and -height
+    // will be changed when styling is formatted with nav bar
+    var tw = canvas.width / grid.width;
+    var th = canvas.height / grid.height;
+    // iterate through the grid and draw all cells
+    for (var x = 0; x < grid.width; x++) {
+      for (var y = 0; y < grid.height; y++) {
+        // sets the fillstyle depending on the id of each cell
+        switch (grid.get(x, y)) {
+          case EMPTY:
+            ctx.fillStyle = "#fff";
+            break;
+          case SNAKE:
+            ctx.fillStyle = "#0ff";
+            break;
+          case FRUIT:
+            ctx.fillStyle = "#f00";
+            break;
+        }
+        ctx.fillRect(x * tw, y * th, tw, th);
+      }
+    }
+    // changes the fillstyle once more and draws the score
+    // message to the canvas
+    ctx.fillStyle = "#000";
+    ctx.fillText("SCORE: " + score, 10, canvas.height - 10);
+  }
+  // start and run the game
+  main();
+
+
