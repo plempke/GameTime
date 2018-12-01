@@ -112,3 +112,26 @@ snake = {
       var randpos = empty[Math.round(Math.random() * (empty.length -1))];
   }
   /*Created the main function to start the game */
+
+  function main() {
+      // create and initate the canvas for the game
+      canvas = document.createElement("canvas");
+      canvas.width = COLS *20;
+      canvas.height = ROWS *20;
+      ctx = canvas.getContext("2d");
+      //adds canvas element to the body of the document
+      document.body.appendChild(canvas);
+      ctx.font = "12px Arial";
+      frames = 0;
+      keystate{};
+      //tracks keyboard input
+      document.addEventListener("keydown", function(evt) {
+          keystate[evt.keyCode] = true;
+      });
+      document.addEventListener("keyup", function(evt){
+          delete keystate[evt.keyCode];
+      });
+      //initate the game objects and starts the game
+      init();
+      loop();
+  }
