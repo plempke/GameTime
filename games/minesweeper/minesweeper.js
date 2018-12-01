@@ -1,4 +1,5 @@
-//Initial Variable declaration
+//Initial Variable declaration and establishes an event listener
+//for move selections
 const rows = 10;
 const columns = 10;
 let mines, remaining, revealed;
@@ -49,7 +50,7 @@ function init() {
 
   //while our placed amount of items (guess, mine or flag, or program will
   //recognize the amount of open spaces and increment placed to know how many
-  //spaces remain to be discovered.
+  //spaces remain to be discovered and how many occupy a mine.
   let placed = 0;
   do {
     let column = Math.floor(Math.random() * columns);
@@ -77,7 +78,7 @@ function init() {
     }
 }
 
-//creates an event for when a space is clicked
+//envokes a function for the event listener we created at the top.
 function click(event) {
   let source = event.target;
   let id = source.id;
