@@ -135,3 +135,24 @@ snake = {
       init();
       loop();
   }
+
+  //need a function to reset the game and initialize the objects
+  function init() {
+    score = 0;
+    grid.init(EMPTY, COLS, ROWS);
+    var sp = {
+      x: Math.floor(COLS / 2),
+      y: ROWS - 1
+    };
+    snake.init(UP, sp.x, sp.y);
+    grid.set(SNAKE, sp.x, sp.y);
+    setFood();
+  }
+
+  /*loop written so that the game will continue to be played and 
+  * restarted whenever the user loses
+  */
+ function loop() {
+     update();
+     draw();
+ }
