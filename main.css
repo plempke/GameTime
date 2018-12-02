@@ -1,29 +1,35 @@
 body {
-  background: white;
+  background: #236467;
   font-family: arial;
   margin: 0;
 }
 
 Header{
-  background: #999;
+  background: #67989A;
   color: white;
   font-size: 75px;
   padding: 10px 15px 10px 15px;
 }
 
+/*GameTime!*/
 h1 {
   font-size: 75px;
   color: white;
 }
 
+/*Welcome to my Website!*/
 h2 {
-  color: #666;
+  color: rgb(255, 255, 255);
   font-size: 55px;
-  padding: 10px 15px 10px 15px;
-  margin: 0;
+  padding: 10px 25px 10px 30px;
+  margin: 10px;
 }
+
+
+
+/*Navigation Bar*/
 li {
-  color: #666;
+  color: #236467;
   font-size: 55px;
 }
 
@@ -31,15 +37,17 @@ a {
   color: blue;
 }
 
+
+
 .flex-container {
   display: flex;
-  background-color: black;
+  background-color: #236467;
 }
 
 .flex-container > div {
   background-color: #f1f1f1;
-  margin: 10px;
-  padding: 10px;
+  margin: 40px;
+  padding: 15px;
   font-size: 30px;
 }
 img {
@@ -68,23 +76,28 @@ p {
   background: #666;
   color: white;
   font-size: 20px;
+  margin: 20px;
   padding: 10px;
   padding-left: 10px;
 }
 
+/*Header for GameTime!*/
 header h1 {
-  margin: 0;
+  margin: 20px;
   display: inline;
 }
 
+/*styling for Navigation Bar*/
 nav ul{
-  margin: 0;
-  padding: 0 0 0 15px;
+  margin: 200px;
+  padding: 0px 0 0 15px;
   display: inline;
+  
 }
 
+/*Navigation Bar blocks*/
 nav ul li{
-  background: black;
+  
   color: white;
   display: inline-block;
   list-style-type: none;
@@ -98,7 +111,16 @@ nav ul li a {
 .row:after {
   clear:both;
 }
+.infoColumn {
+  column-count: 3;
+  column-rule-width: 1px;
+  column-width: 100px;
+  background: lightblue;
+  padding: 15px;
+  align-content: center;
+  margin: 20px;
 
+}
 .col {
   background: #333;
   float: left;
@@ -108,7 +130,11 @@ nav ul li a {
 }
 
 footer {
-  clear: both;
-  font-size: 20px;
-  padding-left: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  
 }
