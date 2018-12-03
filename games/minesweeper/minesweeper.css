@@ -1,7 +1,7 @@
 #minesweeper {
   font-size: 35px;
   text-align: center;
-
+  color: black;
 }
 
 
@@ -29,8 +29,7 @@ h1 {
 /*Game Title*/
 h2 {
   font-size: 75px;
-  background-color: #236467
-  color: white;
+  color: black;
   text-align: center;
   margin: 15px;
 }
@@ -80,12 +79,6 @@ nav ul li a {
 
 body h1 {
   background: #67989A;
-}
-
-.status{
-  text-align: center;
-  font-size: 200px;
-  color: red;
 }
 
 footer {
