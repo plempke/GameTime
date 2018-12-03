@@ -21,8 +21,9 @@ h1 {
 h2 {
   color: rgb(255, 255, 255);
   font-size: 55px;
-  padding: 10px 25px 10px 30px;
+  padding: 10px 25px 10px 75px;
   margin: 10px;
+  align-content: center;
 }
 
 
@@ -45,7 +46,7 @@ a {
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  background-color: white;
   margin: 40px;
   padding: 15px;
   font-size: 30px;
@@ -83,13 +84,14 @@ p {
 
 /*Header for GameTime!*/
 header h1 {
-  margin: 20px;
+  margin: 65px;
+  padding: 0 0 0px 0px;
   display: inline;
 }
 
 /*styling for Navigation Bar*/
 nav ul{
-  margin: 200px;
+  margin: 250px;
   padding: 0px 0 0 15px;
   display: inline;
   
