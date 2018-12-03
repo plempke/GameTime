@@ -27,8 +27,9 @@ function check(row, column) {
 
 //intializes our game for the user to play by creating a game Board
 //and applying the proper styling that we need for a suitable game.
+//also used to format where the board is on the page 
 function init() {
-  mines = 5;
+  mines = 10;
   remaining = mines;
   revealed = 0;
   status.innerHTML = ('Click on the tiles to reveal them');
@@ -37,9 +38,9 @@ function init() {
       let index = row * columns + column;
       tile[row][column] = document.createElement('img');
       tile[row][column].src = 'hidden.png';
-      tile[row][column].style = 'position:absolute;height:30px; width: 30px';
-      tile[row][column].style.top = 150 + row * 30;
-      tile[row][column].style.left = 50 + column * 30;
+      tile[row][column].style = 'position:absolute;height:40px; width: 40px';
+      tile[row][column].style.top = 350 + row * 40;
+      tile[row][column].style.left = 770 + column * 40;
       tile[row][column].addEventListener('mousedown', click);
       tile[row][column].id = index;
       document.body.appendChild(tile[row][column]);
@@ -123,7 +124,7 @@ function click(event) {
             tile[row][column].src = 'misplaced.png';
           }
         }
-      status.innerHTML = 'GAME OVER<br><br>Click here to restart';
+      status.innerHTML = 'GAME OVER!<br>Click here to restart';
     } else
     if (picture[row][column] == 'hidden') reveal(row, column);
   }

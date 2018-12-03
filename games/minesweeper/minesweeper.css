@@ -1,4 +1,9 @@
-#minesweeper
+#minesweeper {
+  font-size: 35px;
+  text-align: center;
+
+}
+
 
 body {
   background: #236467;
@@ -21,13 +26,21 @@ h1 {
   color: white;
 }
 
+/*Game Title*/
+h2 {
+  font-size: 75px;
+  background-color: #236467
+  color: white;
+  text-align: center;
+  margin: 15px;
+}
+
 
 /*Navigation Bar*/
 li {
   color: #236467;
   font-size: 55px;
 }
-
 
 a {
   color: blue;
@@ -65,12 +78,14 @@ nav ul li a {
   clear:both;
 }
 
-.col {
-  background: #333;
-  float: left;
-  color: white;
-  margin: 1%;
-  width: 28%;
+body h1 {
+  background: #67989A;
+}
+
+.status{
+  text-align: center;
+  font-size: 200px;
+  color: red;
 }
 
 footer {
