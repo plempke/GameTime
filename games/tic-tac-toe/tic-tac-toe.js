@@ -41,7 +41,7 @@ const game = (() => {
       scoreContainer.appendChild(node);
     }
   
-    // Checks if the board contains any winning line
+    // Checks if the board contains any winning lines 
     function lookForWinner(gameBoard) {
       const winningLines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],
                             [1,4,7],[2,5,8],[0,4,8],[2,4,6]];
@@ -53,7 +53,8 @@ const game = (() => {
   
       return winner;
     }
-  
+    
+    //reports the winner and tallies the point accordingly
     function displayWinner() { 
       const scoreText = document.querySelector(".scoreText");
       
@@ -69,7 +70,7 @@ const game = (() => {
                              ${computer.getName()} score: ${computer.getScore()}`;
     }
   
-  
+    //checks state of the gameboard, checks for winner, if games full, etc.
     function checkState(gameBoard) {
       if (lookForWinner(gameBoard)) { 
         displayWinner();
@@ -83,7 +84,8 @@ const game = (() => {
     function isBoardFull(gameBoard) {
       return (gameBoard.every(function(slot) { return slot !== "E" }));
     }
-  
+    
+    //creates Gameboard as an array 
     function createBoard() {
       let gameBoard = []
       for (let i = 0; i < 9; i++) {
@@ -92,7 +94,8 @@ const game = (() => {
       }
       return gameBoard;
     }
-  
+    
+    //resets game board if match is complete
     function resetBoard() {
       setTimeout(() => {
         const matchResult = document.querySelector(".match-result");
@@ -107,7 +110,7 @@ const game = (() => {
       }, 1000)
     }
   
-    // Player factory
+    // Player Function
     function newPlayer() {
       const name = prompt("Please, enter your name", "Player");
       let score = 0;
@@ -124,14 +127,14 @@ const game = (() => {
       return {getName, getScore, addPoint, play}
     }
   
-    // ComputerPLayer factory
+    // CPU Player Function
     function newComputerPlayer() {
       const name = "Computer";
       let score = 0;
       const getName = () => name;
       const getScore = () => score;
       const addPoint = () => { score += 1 };
-      //Computer makes a valid move
+      //Computer makes Valid move
       const play = () => {
         let randomNum = Math.floor(Math.random() * 9);
         let target = document.getElementById(`element${randomNum}`);
