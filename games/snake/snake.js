@@ -290,7 +290,7 @@ var read = database.ref('score/snake');
 
 var data = {
 	name: "PCL",
-	score: 43
+	score: 30
 	}
 ref.push(data);
 
@@ -313,8 +313,8 @@ function submitScore() {
 	var ref = database.ref('scores');
 
 	var data = {
-		name: DTS,
-		score: 43
+		name: PCL,
+		score: 30
 		}
   ref.push(data);
   
@@ -338,6 +338,11 @@ function gotData(data){
 		var li = createElement('li', initials + ':' +score) //creates element for the scores
 		li.class('scorelisting'); //assigning these elements to the listing 		
 
-		li.parent('scorelist');
+    li.parent('scorelist');
+    
+function errData(err) {
+	console.log('Error!');
+	console.log(err);
+	}
 		
 	*/
