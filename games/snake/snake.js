@@ -259,26 +259,85 @@ function draw() {
 }
 
 
-//function startGame() {
-  //initalInput = createInput("initials");
-  //submitButton = createButton("submit");
-  //submitButton.mousePressed(submitScore);
 
-  //var answer = prompt("type 'yes' to start the game", "yes");
-  //if (answer !=null) {
-  //  main();
+/*------------------------------------- Code for Firebase ----------------------------------
+function startGame() {
+  initalInput = createInput("initials");
+  submitButton = createButton("submit");
+  submitButton.mousePressed(submitScore);
+
+  var answer = prompt("type 'yes' to start the game", "yes");
+  if (answer !=null) {
+    main();
   }
 
-//function submitScore(){
-  //var data = {
-    //initals: initialInput.value(),
-    //score: score
+function submitScore(){
+  var data = {
+    initals: initialInput.value(),
+    score: score
   }
-  //console.log(data);
-  //var ref = database.ref('score');
-  //ref.push(data);
+  console.log(data);
+  var ref = database.ref('score');
+  ref.push(data);
 }
 
+/*var database = firebase.database();
+--> firebase is the main object that's connected to my online database as it's now in a variable
 
 
-// start and run the game
+var read = database.ref('score/snake');
+-----------> I want to access the scores node in that tree data <------------
+
+var data = {
+	name: "PCL",
+	score: 43
+	}
+ref.push(data);
+
+var initialInput;
+var submitButton;
+
+initalInput = createInput('initials');
+submitButton = createButton('submit');
+submitButton.mousePressed(submitScore);
+
+-------------------> write a function to submit score <----------------
+
+function submitScore() {
+	var data = {
+		initials: initalInput.value(),
+		score: score
+		}
+	console.log(data)
+	var database = firebase.database();
+	var ref = database.ref('scores');
+
+	var data = {
+		name: DTS,
+		score: 43
+		}
+  ref.push(data);
+  
+  var ref = database.ref('scores');
+ref.on('value', gotData, errData);
+
+function gotData(data){
+
+	var scorelistings = selectAll('.scorelisting');
+	for (var  i= 0; i< scorelistinngs.length; i++) 
+	
+	console.log(data.val);
+	var scores = data.val();
+	var keys = Object.keys(scores);
+	console.log(keys);
+	for (var i = 0, i <keys.length, i++) {
+		var k = keys[i];
+		var initials = scores[k].initials;
+		var score = scores[k].score;
+		//console.log(initials, scores);
+		var li = createElement('li', initials + ':' +score) //creates element for the scores
+		li.class('scorelisting'); //assigning these elements to the listing 		
+
+		li.parent('scorelist');
+		
+	*/
