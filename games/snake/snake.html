@@ -18,6 +18,18 @@
   console.log(firebase);
 </script>
 
+<script>
+  var database = firebase.database();
+  var ref = database.ref('scores');
+
+  var data = {
+    name: "PCL",
+    score: 30
+  }
+  ref.push(data);
+
+</script>
+
 
   
 
