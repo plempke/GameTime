@@ -31,17 +31,30 @@
 
 </script>
 
+<link href="snake.css" rel="stylesheet" type="text/css" />
 
-  
 
- 
+
+
+<script>
+/*this script will call my store the user's information for the database*/
+var
+  initalInput = createInput("initials");
+  submitButton = createButton("submit");
+  submitButton.mousePressed(submitScore);
+
+
+
+
+
+</script>
 
 <title>Snake</title>
-  <link href="snake.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body oncontextmenu="return false;">
+
+  
 
   <header>
     <nav>
@@ -57,6 +70,8 @@
   </header>
 
   <h2> Snake </h2>
+
+  <h3><input type="button" value="Click here to start!" onclick="main()"/></h3>
 
   <script async custom-element="amp-auto-ads"
   src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">

@@ -19,7 +19,17 @@ var
   ctx, 
   keystate, 
   frames, 
-  score; 
+  score,
+  
+  /*Setup variables*/
+  intialInput,
+  submitButton,
+  database;
+  
+  
+
+
+  
 
 grid = {
   width: null,
@@ -131,6 +141,7 @@ function main() {
   });
   init();
   loop();
+  
 }
 
 
@@ -195,7 +206,7 @@ function update() {
         break;
     }
 
-    // checks all gameover conditions
+    // checks all gameover conditions; if it hits the x or y coordinate then the game ends 
     if (0 > nx || nx > grid.width - 1 ||
       0 > ny || ny > grid.height - 1 ||
       grid.get(nx, ny) === SNAKE
@@ -208,7 +219,7 @@ function update() {
       score++;
       setFood();
     } else {
-      // take out the first item from the snake queue i.e the tail and remove id from grid
+      // take out the snake from the first game and remove it's tail from the grid
       var tail = snake.remove();
       grid.set(EMPTY, tail.x, tail.y);
     }
@@ -248,6 +259,26 @@ function draw() {
 }
 
 
+function startGame() {
+  initalInput = createInput("initials");
+  submitButton = createButton("submit");
+  submitButton.mousePressed(submitScore);
+
+  //var answer = prompt("type 'yes' to start the game", "yes");
+  //if (answer !=null) {
+  //  main();
+  }
+
+function submitScore(){
+  var data = {
+    initals: initialInput.value(),
+    score: score
+  }
+  console.log(data);
+  var ref = database.ref('score');
+  ref.push(data);
+}
+
+
 
 // start and run the game
-main();
