@@ -45,14 +45,39 @@ h2 {
   margin: 15px;
 }
 
-h3 input{
+/*Start Button for snake*/
+h3 {
   background: white;
   margin: 0px;
-  top: 0;
+  top: 100px;
   bottom: 0;
   left: 10000px;
   right: 400px;
 }
+
+
+/*High Scores Table*/
+table th, td{
+  border: 1px solid black;
+  background: #67989A;
+  color: white;
+  margin: 1000px;
+  left: 100px;
+}
+
+th, td {
+  padding: 15px;
+}
+
+th {
+  text-align: left;
+}
+caption {
+  background: #67989A;
+}
+
+
+
 
 /*Navigation Bar*/
 li {
@@ -87,6 +112,8 @@ nav ul li{
   padding: 5px 15px;
   margin: 0;
 }
+
+
 
 nav ul li a {
   color: white;

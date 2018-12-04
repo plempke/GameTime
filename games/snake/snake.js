@@ -259,24 +259,24 @@ function draw() {
 }
 
 
-function startGame() {
-  initalInput = createInput("initials");
-  submitButton = createButton("submit");
-  submitButton.mousePressed(submitScore);
+//function startGame() {
+  //initalInput = createInput("initials");
+  //submitButton = createButton("submit");
+  //submitButton.mousePressed(submitScore);
 
   //var answer = prompt("type 'yes' to start the game", "yes");
   //if (answer !=null) {
   //  main();
   }
 
-function submitScore(){
-  var data = {
-    initals: initialInput.value(),
-    score: score
+//function submitScore(){
+  //var data = {
+    //initals: initialInput.value(),
+    //score: score
   }
-  console.log(data);
-  var ref = database.ref('score');
-  ref.push(data);
+  //console.log(data);
+  //var ref = database.ref('score');
+  //ref.push(data);
 }
 
 
