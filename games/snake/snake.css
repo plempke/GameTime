@@ -1,7 +1,16 @@
-body {
-  background-color: #a3d5d3;
+#snake {
+  font-size: 35px;
+  text-align: center;
+  color: black;
 }
 
+body {
+  background: #236467;
+  font-family: arial;
+  margin:0;
+}
+
+/*styling of snake canvas*/
 canvas {
   display: block;
   position: absolute;
@@ -11,4 +20,80 @@ canvas {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+Header{
+  background: #67989A;
+  color: white;
+  font-size: 75px;
+  padding: 10px 15px 10px 15px;
+}
+
+/*GameTime!*/
+h1 {
+  font-size: 75px;
+  color: white;
+}
+
+/*Game Title*/
+h2 {
+  font-size: 75px;
+  color: black;
+  text-align: center;
+  margin: 15px;
+}
+
+/*Navigation Bar*/
+li {
+  color: #236467;
+  font-size: 55px;
+}
+
+a {
+  color: blue;
+}
+
+
+/*Header for GameTime!*/
+header h1 {
+  margin: 65px;
+  padding: 0 0 0px 0px;
+  display: inline;
+}
+
+/*styling for Navigation Bar*/
+nav ul{
+  margin: 250px;
+  padding: 0px 0 0 15px;
+  display: inline;  
+}
+
+/*Navigation Bar blocks*/
+nav ul li{
+  color: white;
+  display: inline-block;
+  list-style-type: none;
+  padding: 5px 15px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+}
+
+.row:after {
+  clear:both;
+}
+
+body h1 {
+  background: #67989A;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
 }
