@@ -25,7 +25,9 @@ grid = {
   width: null,
   height: null,
   _grid: null,
-  
+
+
+
   /* Initiate and fill a c x r grid with the default value d */
   init: function(d, c, r) {
     this.width = c;
@@ -117,7 +119,7 @@ function main() {
   document.body.appendChild(canvas);
 
   // sets an base font for bigger score display
-  ctx.font = "12px arial";
+  ctx.font = "20px arial";
   frames = 0;
   keystate = {};
   // tracks keyboard inputs
@@ -244,5 +246,8 @@ function draw() {
   ctx.fillStyle = "#000";
   ctx.fillText("SCORE: " + score, 10, canvas.height - 10);
 }
+
+
+
 // start and run the game
 main();
