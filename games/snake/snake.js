@@ -25,18 +25,11 @@ var
   intialInput,
   submitButton,
   database;
-  
-  
-
-
-  
 
 grid = {
   width: null,
   height: null,
   _grid: null,
-
-
 
   /* Initiate and fill a c x r grid with the default value d */
   init: function(d, c, r) {
@@ -50,7 +43,6 @@ grid = {
       }
     }
   },
-
 
   /*Set the value of the grid cell at (x, y) */
   set: function(val, x, y) {
