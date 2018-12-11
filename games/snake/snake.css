@@ -51,8 +51,8 @@ h3 {
   margin: 0px;
   top: 0px;
   bottom: 0;
-  padding-left: 900px;
-  padding-top: 300px;
+  padding-left: 800px;
+  padding-top: 250px;
   right: 400px;
 }
 
@@ -82,8 +82,9 @@ th, td, tr {
 th {
   text-align: left;
 }
+
 caption {
-  background: #67989A;
+  background: rgb(130, 157, 158);
   color: white;
   margin: 10px;
 }
@@ -146,7 +147,7 @@ body h1 {
 footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  padding-bottom: 15px;
   width: 100%;
   font-size: 40px;
   text-align: center;
