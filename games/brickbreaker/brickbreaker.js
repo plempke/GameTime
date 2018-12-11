@@ -135,7 +135,6 @@ function ballBrickColl(){
 
     }
   }
-  // colorText(ballBrickCol+","+ballBrickRow+": "+brickIndexUnderBall, mouseX, mouseY, 'white');
 }
 
 function paddleMove(){
